@@ -19,7 +19,7 @@ est textuellement dans la portée:
 
 Voici un autre exemple, où RGB maker prend une focntion et renvoie une nouvelle
 qui se souvient et utilise la fonction d'origine.
-``
+```racket
 (define (rgb-maker mk)
 (lambda (sz)
 (vc-append (colorize (mk sz) "red")
@@ -29,7 +29,7 @@ qui se souvient et utilise la fonction d'origine.
 image
 (series (rgb-maker square))
 image
-
+```
 Remarquez comment les fonctions de composition via RGB maker créent un
 alignement différent des objets dans l'image par rapport à l'utilisation de RGB
 series.
