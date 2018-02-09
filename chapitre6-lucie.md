@@ -1,4 +1,4 @@
-Les fonctions sont des valeurs
+#Les fonctions sont des valeurs
 Plutôt que de considérer ‘circle’ comme un fonction, essayez de
 l’envisager comme une expression.
 
@@ -14,13 +14,15 @@ Cet exemple démontre que les fonctions sont des valeurs, tout comme les nombres
 et les images (même si elles ne s'affichent pas aussi bien). Les fonctions étant
 des valeurs, vous êtes en mesure de définir des fonctions qui acceptent d'autres
 fonctions comme arguments.
+
 (define (series mk)
 (hc-append 4 (mk 5) (mk 10) (mk 20)))
 
+```racket
 > (series circle)
 
 > (serie square)
-
+```
 Quand une fonction qui appelle une fonction comme argument est appelée,
 la fonction argument n'est souvent nécessaire null part ailleurs. Devoir écrire la
 fonction via 'define' serait problématique puisque vous devez la nommer et
