@@ -1,4 +1,4 @@
-#Les fonctions sont des valeurs
+# Les fonctions sont des valeurs
 Plutôt que de considérer ‘circle’ comme un fonction, essayez de
 l’envisager comme une expression.
 
