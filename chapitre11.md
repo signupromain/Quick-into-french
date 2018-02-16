@@ -4,14 +4,14 @@
 Un système objet est un autre exemple d'extension de langage sophistiqué qui vaut la peine d'être appris
 et utilisé par les utilisateurs de Racket.
 Les objets sont parfois meilleurs que les fonctions,
-même lorsque vous avez lambda,
+même lorsque vous avez ```racket lambda```,
 et les objets fonctionnent particulièrement bien pour les interfaces utilisateur graphiques.
 L'API de l'interface graphique et du système graphique de Racket
 est exprimée en termes d'objets et de classes.
 
-Le système de classe est lui-même est implémenté par la bibliothèque racket / class,
-et la bibliothèque racket / gui / base fournit les classes de GUI et de dessin.
-Par convention, les classes reçoivent des noms qui se terminent par%:
+Le système de classe est lui-même est implémenté par la bibliothèque ```racket racket / class```
+et la bibliothèque```racket racket/gui/base``` fournit les classes de GUI et de dessin.
+Par convention, les classes reçoivent des noms qui se terminent par %:
 
 ```racket
 
@@ -29,7 +29,7 @@ Par convention, les classes reçoivent des noms qui se terminent par%:
 
 ```
 
-La forme new crée une instance d'une classe, où les arguments d'initialisation
+La forme ```racket new``` crée une instance d'une classe, où les arguments d'initialisation
 tels que label et width sont fournis par name.
 Le formulaire d'envoi appelle une méthode de l'objet,
 telle que show, avec des arguments après le nom de la méthode;
