@@ -6,7 +6,7 @@ Pour utiliser un ... cercle et une image de rectangle à chaque fois, il est plu
 (define c (circle 10))
 (define r (rectangle 10 20))
 ```
-Puis cliquez sur Exécuter à nouveau. Maintenant, vous pouvez simplement taper c ou r :
+Puis cliquez sur ***Exécuter*** à nouveau. Maintenant, vous pouvez simplement taper c ou r :
 
 ```racket
 > r
