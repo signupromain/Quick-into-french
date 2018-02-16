@@ -1,5 +1,5 @@
 ## 5. Liaison locale
-La forme ```racket define``` peut-être utilisée dans certaines situations pour créer des liaisons locales. Par exemple, elle peut être utilisée à l'intérieur d'une fonction principale:
+La forme ```define``` peut-être utilisée dans certaines situations pour créer des liaisons locales. Par exemple, elle peut être utilisée à l'intérieur d'une fonction principale:
 
 ```racket
 (define(four p))
