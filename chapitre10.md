@@ -10,7 +10,7 @@ Au lieu d’un cercle, le résultat est une image du code qui,
 si elle était utilisé comme une expression, produirait un cercle.
 En d’autres termes,``` code ```  n’est pas une fonction,
 mais plutôt une nouvelle forme syntaxique pour créer des
-images; le morceaux entre les parenthèses ouvrantes avec ``` code``` n’est pas une expression,
+images; le morceaux entre les parenthèses ouvrantes avec ``` code ``` n’est pas une expression,
 mais plutôt manipulé par la forme syntaxique ``` code ```
 
 Cela aide a expliquer ce que nous voulions dire dans la section précédente quand
