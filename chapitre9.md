@@ -1,18 +1,23 @@
-#9.Modules
+## 9Modules
 Depuis votre programme dans la fenêtre définition commencez par 
-\#lang slideshow
 
+```racket
+\#lang slideshow
+```
 Tout le code que vous entrez dans la fenêtre de définition se situe à 
 l'intérieur d'un module. De plus, le module importe tout le contenu du 
-module dont le nom est slideshow, qui lui exporte les fonctions de création 
+module dont le nom est 'slideshow', qui lui exporte les fonctions de création 
 d'images ainsi que des fonctions plus communéments utilisées tel que
 'list' et 'map'.
 
 Pour importer des librairies additionnelles, utilisez la syntaxe 'require'. Par exemple, la librairie 'pict/flash' donne accès à la fonction 'filled-flash':
 
+```racket
 (require pict/flash)
 
 > (filled-flash 40 30)
+```
+
 
 Les modules sont nommés et distribués de plusieurs façons:
 
@@ -35,13 +40,17 @@ Les modules sont nommés et distribués de plusieurs façons:
 
   Beaucoup de modules dépendent relativement d'autres modules, sans nécessairement appartenir à une collection de paquets en particulier. Par exemple, dans DrRacket, si vous sauvez vos définitions dans un fichier "quick.rkt" et ajoutez la ligne
 
+```racket
 > (provide rainbow square)
+```
 
   alors vous pourrez ouvrir un nouvel onglet ou une nouvelle fenêtre dans DrRacket, nommez le nouveau programme "use.rkt" dans le même répertoire que "quick.rkt":
 
+```racket
 > \#lang racket
 > (require "quick.rkt")
 > (rainbow (square5))
+```
 
 et quand vous lancez "use.rkt", une liste arc-en-ciel de carrés est retournée. Notez que "use.rkt" est écrit en utilisant l'importation racket original, qui ne supporte pas les fonctions de création d'images mais fournis les fontions require et les fonctions d'appel de syntaxe.
 
