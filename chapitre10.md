@@ -22,21 +22,21 @@ c'est plus une idée de la façon de structurer un langage pour pouvoir l'étend
 
 Une façon d'introduire une nouvelle forme syntaxique est de ``` define-syntax ``` avec ``` syntax-rule ```:
 ```
-    (définir-syntaxe pict + code
-         (règles de syntaxe ()
-           [(pict + code expr)
-             (hc-annexe 10
+   (define-syntax pict+code
+     (syntax-rules ()
+       [(pict+code expr)
+         (hc-append 10
                     expr
                     (code expr))]))
+ 
 
-     
-    > (pict + code (cercle 10))
+  > (pict+code (circle 10))
+  O (CIRCLE 10)
 
-    O  (CIRCLE 10)
 ```
 Ce genre de définition est une macro. La partie (pict + code expr) est un modèle pour les utilisations de la macro;
 les instances du modèle dans un programme sont remplacées par des instances du modèle correspondant, qui est ```(hc-append 10 expr (code expr))```.
-En particulier, (pict + code ```(circle 10))``` correspond au motif avec ```(circle 10)``` comme expression, donc il est remplacé par ```(hc-append 10 (circle 10) (code (cercle 10)))```.
+En particulier, (pict + code ```(circle 10))``` correspond au motif avec ```(circle 10)``` comme expression, donc il est remplacé par ```(hc-append 10 (circle 10) (code (circle 10)))```.
 
 Bien sûr, ce genre d'extension syntaxique va dans les deux sens: inventer un nouveau langage peut rendre plus facile de dire ce que vous voulez,
 mais plus difficile à comprendre pour les autres. En l'occurrence,
