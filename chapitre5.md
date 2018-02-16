@@ -1,6 +1,5 @@
-## Les fonctions sont des valeurs
-5. Liaison locale
-La forme définie peut-être utilisée dans quelque situation pour créer des liaisons locales. Par exemple, cela peut-être utilisé à l'intérieur d'une fonction principale:
+## 5. Liaison locale
+La forme ```racket define``` peut-être utilisée dans certaines situations pour créer des liaisons locales. Par exemple, elle peut être utilisée à l'intérieur d'une fonction principale:
 
 ```racket
 (define(four p))
@@ -11,7 +10,7 @@ La forme définie peut-être utilisée dans quelque situation pour créer des li
 
 ```
 
-PLus typiquement, les Racketers utilisent le let ou let forme pour liaison locale. Un avantage de let est qu'il peut être utilisé pour des éléments d'expression. Aussi, ça relie plusieurs identifiants en une seule fois, à la place de demander une requête séparée pour chaque identifiant: 
+Plus typiquement, les Racketeurs utilisent la forme  ```racket let``` ou ```racket let*```  pour créer une liaison locale. Un avantage de ```racket let``` est qu'il peut être utilisé n'importe où à l'intérieur d'une expression. De plus, il relie plusieurs identifiants à la fois, au lieu de nécessiter  une ```racket define```  séparée pour chaque identifiant: 
 
 ```racket
 
@@ -20,9 +19,20 @@ PLus typiquement, les Racketers utilisent le let ou let forme pour liaison local
     [p21 (hc-append p2 p1)])
 (vc-append p12 p21)))
 
-> (checke(colorize(square 10)"red")
-        (colorize(square 10)"black"))
+> (checker (colorize (square 10) "red")
+        (colorize (square 10) "black"))
 ```
-Une forme let relie plusieurs idetifiants en même temps, alors les liaisons ne
-peuvent pas se reférer entre elles. La forme let, en contraste, permets  plus
-tard des liaisons à utiliser
+Une forme ```racket let``` relie plusieurs idetifiants en même temps, de manière à ce que les liaisons ne
+puissent pas se reférer entre elles. La forme ```racket let*```, a contrario, permet d'utiliser dans les liaisons suivantes, définies au préalable.
+
+```racket
+(define (checkerboard p)
+  (let* ([rp (colorize p "red")]
+         [bp (colorize p "black")]
+         [c (checker rp bp)]
+         [c4 (four c)])
+    (four c4)))
+ 
+
+> (checkerboard (square 10))
+```
